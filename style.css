@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(168, 218, 220, 0.5);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Coisado aqui */
+
+/* ================================================================================================ */
+
+.calculator {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: rgba(2, 2, 2, 0.15);
+  border-radius: 1rem;
+  -webkit-box-shadow: 12px 7px 5px 3px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 12px 7px 5px 3px rgba(0, 0, 0, 0.07);
+  box-shadow: 12px 7px 5px 3px rgba(0, 0, 0, 0.07);
+}
+
+.display,
+.display>input {
+  width: 100%;
+  text-align: end;
+}
+
+.display>input {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  min-width: 13.75rem;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.keys>* {
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.key:nth-child(17) {
+  grid-column: 2/3;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+/* Erro no VS code. */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Teste */
+.key:hover {
+  background-color: rgba(145, 163, 176,0.8);
+}
+.key:active{
+  background-color: rgba(145, 163, 176,0.6);
+}
+
+#PrevValue {
+  position: absolute;
+  top: 0;
+  padding: 0.3rem;
+  margin: 0;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  max-width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.display {
+  position: relative;
+}
